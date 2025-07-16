@@ -12,19 +12,19 @@ var fib = function(n) {
         return 0;
     } else if (n === 1) {
         return 1;
-    }
-
-    let startNumber = 0;
-    let secondNumber = 1;
-    let recentNumber;
+    } else {
+        let startNumber = 0;
+        let secondNumber = 1;
+        let recentNumber;
     
-    for (let i = 2; i <= n; i++) {
-        recentNumber = startNumber + secondNumber;
-        startNumber = secondNumber;
-        secondNumber = recentNumber;
-    }
+        for (let i = 2; i <= n; i++) {
+            recentNumber = startNumber + secondNumber;
+            startNumber = secondNumber;
+            secondNumber = recentNumber;
+        }
 
-    return recentNumber;
+        return recentNumber;
+    }
 };
 
 /*
@@ -47,16 +47,16 @@ function fibonacciGenerator(n) {
         return '';
     } else if (n === 1) {
         return '0';
-    }
-
-    fibonacciSeries.push(0, 1);
+    } else {
+            fibonacciSeries.push(0, 1);
 
     for (let i = 2; i < n; i++) {
         let recentNumber = fibonacciSeries[i - 1] + fibonacciSeries[i - 2];
         fibonacciSeries.push(recentNumber);
     }
 
-    return fibonacciSeries.join(',');
+        return fibonacciSeries.join(',');
+    }
 }
 
 fibonacciGenerator(3);
