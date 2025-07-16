@@ -8,9 +8,11 @@ Given n, calculate F(n).
 */
 
 var fib = function(n) {
-    if (n === 0) return 0;
-
-    if (n === 1) return 1;
+    if (n === 0) { 
+        return 0;
+    } else if (n === 1) {
+        return 1;
+    }
 
     let startNumber = 0;
     let secondNumber = 1;
@@ -41,8 +43,11 @@ fibonacciGenerator(3) and get [0,1,1] as the output.
 function fibonacciGenerator(n) {
     let fibonacciSeries = [];
 
-    if (n === 0) return '';
-    if (n === 1) return '0';
+    if (n === 0) {
+        return '';
+    } else if (n === 1) {
+        return '0';
+    }
 
     fibonacciSeries.push(0, 1);
 
