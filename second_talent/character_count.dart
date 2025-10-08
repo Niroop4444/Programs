@@ -4,11 +4,13 @@ void main() {
 }
 
 Map<String, int> countCharacters(String text) {
-  Map<String, int> counts = {};
+  final counts = <String, int>{};
 
-  List words = text.toString().toLowerCase().split('');
-  for (String character in words) {
-    counts[character] = (counts[character] ?? 0) + 1;
+  for (final char in text.toLowerCase().split('')) {
+    if (char.trim().isEmpty) continue;
+
+    counts.update(char, (count) => count + 1, ifAbsent: () => 1);
   }
+
   return counts;
 }
