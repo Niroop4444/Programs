@@ -1,3 +1,5 @@
+# Python program to print all Prime numbers between 1 to n.
+
 def is_prime(num):
     if num < 2:
         return False
