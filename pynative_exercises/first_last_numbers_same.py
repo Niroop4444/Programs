@@ -1,3 +1,6 @@
+# Write a code to return True if the list’s first and last numbers are the same. 
+# If the numbers are different, return False.
+
 def first_last_same(nums):
    if nums[0] == nums[-1]:
       return True
