@@ -1,3 +1,5 @@
+# Python code to display numbers from a list divisible by 5
+
 def numbers_divisible_by_5(nums):
    numbers_divisible_by_5 = [num for num in nums if num % 5 == 0]
    return numbers_divisible_by_5
